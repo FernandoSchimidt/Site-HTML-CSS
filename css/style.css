@@ -1,0 +1,114 @@
+*,
+*:before,
+*:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: inherit;
+}
+
+input,
+select,
+iframe,
+button {
+    border: none;
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1,
+h2,
+h3 {
+    margin: 0;
+    padding: 0;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    color: #f9014d;
+}
+
+
+/* Section*/
+
+
+/* header */
+
+.header {
+    display: none;
+}
+
+.section {
+    float: left;
+    width: 100%;
+}
+
+
+/* Serach estatisticas */
+
+.search-box {
+    /* Centraliza o texto*/
+    color: #fff;
+    padding: 100px 0;
+    text-align: center;
+    background-image: url(../images/bg-search.jpg);
+    background-size: cover;
+    /* Centraliza a imagem*/
+    background-position: center;
+    /* fixa a imagem na rolagem*/
+    background-attachment: fixed;
+}
+
+.search-box h1 {
+    font-size: 37px;
+    font-weight: bold;
+}
+
+.search-box .tagline {
+    font-size: 26px;
+}
+
+.search-box form {
+    position: relative;
+    display: inline-block;
+    width: 90%;
+    max-width: 500px;
+    margin-top: 40px;
+}
+
+.search-box form input[type="search"] {
+    width: 100%;
+    height: 50px;
+    font-size: inherit;
+    color: #2c3e50;
+    padding: 0 10px;
+    -webkit-border-radius: 6px;
+}
+
+.search-box form button {
+    background: #a70606;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    color: #fff;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    -webkit-border-top-right-radius: 6px;
+    border-top-right-radius: 6px;
+    -webkit-border-bottom-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
