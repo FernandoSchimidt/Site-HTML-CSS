@@ -41,6 +41,11 @@ a:hover {
     color: #f9014d;
 }
 
+img {
+    max-width: 100%;
+    border: none;
+}
+
 
 /* gerais*/
 
@@ -49,24 +54,171 @@ a:hover {
     width: 100%;
 }
 
+.section:not(:first-of-type) {
+    margin-top: 60px;
+}
+
+.section-header {
+    margin-bottom: 40px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.section-header h1 {
+    font-size: 38px;
+    font-weight: normal;
+}
+
 .content {
     width: 100%;
     width: 90%;
     margin: 0 auto;
 }
 
+.row {
+    float: left;
+    width: 100%;
+    margin-bottom: 100px;
+}
 
-/* header */
+
+/*load more*/
+
+.loadmore {
+    background: none;
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    font-size: 17px;
+    cursor: pointer;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.loadmore:hover {
+    color: #a70606;
+    border: 1px solid #a70606;
+}
+
+
+/* BOX
+--------------------------------------------------------------------------------------------------*/
+
+.box {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+
+.box-name {
+    position: absolute;
+    z-index: 2;
+    left: 10px;
+    top: 10px;
+    font-size: 14px;
+    color: #fff;
+    padding: 5px 10px;
+    background: #f9014d;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.box-cover {
+    font-size: 0;
+    line-height: 1em;
+}
+
+.box-cover img {
+    width: 100%;
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    /*transição da imagem-------------*/
+    -webkit-transition: all 300ms ease-in-out;
+    transition: all 300ms ease-in-out;
+}
+
+.box-detalhes {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    padding: 15px;
+    color: #fff;
+    font-size: 15px;
+}
+
+.box-detalhes:before {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    top: -5px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: .8;
+    visibility: hidden;
+    background: linear-gradient(to bottom, transparent, #000);
+    -webkit-transition: all 250ms ease-in-out;
+    transition: all 250ms ease-in-out;
+    -webkit-transform: translate(0, 50%);
+    transform: translate(0, 50%);
+}
+
+.box-detalhes-info {
+    position: relative;
+    z-index: 2;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: all 250ms ease-in-out;
+    transition: all 250ms ease-in-out;
+    -webkit-transform: translate(0, 50%);
+    transform: translate(0, 50%);
+}
+
+.box-detalhes-info h1 {
+    font-size: 20px;
+}
+
+
+/*box:hover
+----------------------------------------------------------------------------------------------------------*/
+
+.box:hover .box-cover img {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+
+.box:hover .box-detalhes:before,
+.box:hover .box-detalhes-info {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+}
+
+
+/* header 
+------------------------------------------------------------------------------------------------------*/
 
 .header {
     position: fixed;
     width: 100%;
     padding-top: 30px;
     z-index: 6;
+    -webkit-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
 }
 
 .header .logo img {
     max-width: 150px;
+}
+
+.header.fixed {
+    background: #2c3e50;
+    padding: 10px 0 5px 0;
 }
 
 
@@ -157,6 +309,14 @@ a:hover {
 }
 
 
+/*Destinos
+-------------------------------------------------------------------------*/
+
+.destinos-col {
+    margin-bottom: 20px;
+}
+
+
 /* Breakpoints maximos */
 
 @media (max-width: 767.9px) {
@@ -212,7 +372,7 @@ a:hover {
     }
     .header .nav {
         float: right;
-        margin-top: 20px;
+        margin-top: 13px;
     }
     .header .nav ul li {
         display: inline-block;
@@ -239,6 +399,32 @@ a:hover {
     }
     .estatisticas-item:not(:last-of-type) {
         border-right: 1px solid #ccc;
+    }
+    .destinos-col {
+        width: 49%;
+        margin-right: 2%;
+        scroll-margin-bottom: 2%;
+        float: left;
+    }
+    .destinos-col:nth-child(odd) {
+        margin-right: 0;
+    }
+    .destinos-col:first-child {
+        width: 100%;
+    }
+}
+
+@media(min-width: 900px) {
+    .destinos-col:nth-child(odd),
+    .destinos-col {
+        width: 32%;
+        margin-right: 2%;
+    }
+    .destinos-col:nth-of-type(3n+2) {
+        margin-right: 0;
+    }
+    .destinos-col:first-child {
+        width: 66%;
     }
 }
 
