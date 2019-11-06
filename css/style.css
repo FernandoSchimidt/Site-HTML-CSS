@@ -42,18 +42,31 @@ a:hover {
 }
 
 
-/* Section*/
+/* gerais*/
+
+.section {
+    float: left;
+    width: 100%;
+}
+
+.content {
+    width: 100%;
+    width: 90%;
+    margin: 0 auto;
+}
 
 
 /* header */
 
 .header {
-    display: none;
+    position: fixed;
+    width: 100%;
+    padding-top: 30px;
+    z-index: 6;
 }
 
-.section {
-    float: left;
-    width: 100%;
+.header .logo img {
+    max-width: 150px;
 }
 
 
@@ -94,7 +107,8 @@ a:hover {
     height: 50px;
     font-size: inherit;
     color: #2c3e50;
-    padding: 0 10px;
+    padding: 0 70px 0 10px;
+    border-radius: 6px;
     -webkit-border-radius: 6px;
 }
 
@@ -104,6 +118,7 @@ a:hover {
     width: 50px;
     height: 50px;
     color: #fff;
+    font-size: 20px;
     top: 0;
     right: 0;
     cursor: pointer;
@@ -111,4 +126,141 @@ a:hover {
     border-top-right-radius: 6px;
     -webkit-border-bottom-right-radius: 6px;
     border-bottom-right-radius: 6px;
+}
+
+
+/* estatisticas*/
+
+.estatisticas {
+    background: #fff;
+    max-width: 960px;
+    width: 90%;
+    padding: 30px 0;
+    margin: -40px auto 0 auto;
+    text-align: center;
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -webkit-box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, .3);
+    box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, .3);
+}
+
+.estatisticas-item span {
+    font-size: 33px;
+    font-weight: bold;
+}
+
+.estatisticas-item p {
+    font-size: 20px;
+}
+
+
+/* Breakpoints maximos */
+
+@media (max-width: 767.9px) {
+    /*menu*/
+    .nav-toggle {
+        color: #fff;
+        font-size: 22px;
+    }
+    .nav-close {
+        font-size: 22px;
+    }
+    .header .nav.active {
+        right: 0;
+    }
+    .header .nav {
+        background: #fff;
+        width: 250px;
+        height: 100%;
+        position: fixed;
+        padding: 15px;
+        right: -100%;
+        top: 0;
+        z-index: 10;
+        transition: right .7s ease-in-out;
+    }
+    .header .nav ul li {
+        padding: 15px 5px;
+        font-size: 20px;
+        border-bottom: 1px solid #ccc;
+    }
+    /*estatisticas*/
+    .estatisticas {
+        flex-direction: column;
+    }
+    .estatisticas-item {
+        min-width: 90%;
+    }
+    .estatisticas-item:not(:last-of-type) {
+        margin-bottom: 15px;
+        padding-bottom: 15px;
+        border-bottom: 1px solid #ccc;
+    }
+}
+
+
+/*Breakpoints minimos */
+
+@media (min-width: 768px) {
+    /*menu */
+    .nav-toggle,
+    .nav-close {
+        display: none;
+    }
+    .header .nav {
+        float: right;
+        margin-top: 20px;
+    }
+    .header .nav ul li {
+        display: inline-block;
+        margin-left: 20px;
+    }
+    .header .nav ul li a {
+        color: #fff;
+    }
+    .header .nav ul li a:hover {
+        color: #f9014d;
+    }
+    /* search*/
+    .search-box {
+        padding: 200px 0;
+    }
+    .estatisticas {
+        margin-top: -65px;
+    }
+    .estatisticas-item {
+        text-align: center;
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+    }
+    .estatisticas-item:not(:last-of-type) {
+        border-right: 1px solid #ccc;
+    }
+}
+
+
+/* Auxiares*/
+
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.fl-left {
+    float: left;
+}
+
+.fl-right {
+    float: right;
 }
