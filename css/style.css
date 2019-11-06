@@ -78,7 +78,6 @@ img {
 .row {
     float: left;
     width: 100%;
-    margin-bottom: 100px;
 }
 
 
@@ -317,6 +316,14 @@ img {
 }
 
 
+/*Destaques4
+--------------------------------------------------------------------------*/
+
+.destaques-col {
+    margin-bottom: 20px;
+}
+
+
 /* Breakpoints maximos */
 
 @media (max-width: 767.9px) {
@@ -359,6 +366,46 @@ img {
         padding-bottom: 15px;
         border-bottom: 1px solid #ccc;
     }
+}
+
+
+/*Parallax
+-------------------------------------------------------------------------------------------------------*/
+
+.parallax {
+    float: left;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    font-size: 23px;
+    padding: 160px 0;
+    margin: 60px 0;
+    background-image: url(../images/bg-paralax.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.parallax h1 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.parallax button {
+    background: #f9014d;
+    font-size: 20px;
+    padding: 10px 15px;
+    margin-top: 20px;
+    cursor: pointer;
+    color: #fff;
+    -webkit-border-radius: 7px;
+    border-radius: 7px;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.parallax button:hover {
+    background: #e92863;
 }
 
 
@@ -411,6 +458,16 @@ img {
     }
     .destinos-col:first-child {
         width: 100%;
+    }
+    /*Destaques-col -------------------------*/
+    .destaques-col {
+        width: 49%;
+        margin-right: 2%;
+        margin-bottom: 2%;
+        float: left;
+    }
+    .destaques-col:nth-of-type(2n+0) {
+        margin-right: 0;
     }
 }
 
