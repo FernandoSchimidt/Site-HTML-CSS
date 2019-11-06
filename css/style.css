@@ -316,11 +316,109 @@ img {
 }
 
 
-/*Destaques4
+/*Destaques
 --------------------------------------------------------------------------*/
 
 .destaques-col {
     margin-bottom: 20px;
+}
+
+
+/*Testemunhas
+----------------------------------------------------------------------------*/
+
+.testemunhas {
+    padding: 100px 0;
+    background-image: url(../images/bg-testemunhas.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.testemunhas-article {
+    float: left;
+    background: rgba(255, 255, 255, .6);
+    width: 100%;
+    font-size: 12px;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+
+.testemunhas-article h1 {
+    font-size: 16px;
+    font-weight: normal;
+    margin-bottom: 20px;
+    border-left: 8px solid #ccc;
+    padding-left: 12px;
+}
+
+.testemunhas-article .image {
+    overflow: hidden;
+    float: left;
+    margin-right: 10px;
+    width: 83px;
+    height: 83px;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+}
+
+.testemunhas-article p {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 83px;
+}
+
+.testemunhas-article .name {
+    color: #a70606;
+    font-weight: bold;
+}
+
+
+/*Footer
+-----------------------------------------------------------------------------*/
+
+.footer {
+    background: #181818;
+    float: left;
+    width: 100%;
+    color: #fff;
+    padding: 30px 0;
+}
+
+.footer-col {
+    width: 100%;
+    float: left;
+    margin-bottom: 30px;
+}
+
+.footer-col h1 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.footer-col .liks-uteis li {
+    padding: 10px;
+}
+
+.footer-col .liks-uteis li:not(:last-of-type) {
+    border-bottom: 1px solid #fff;
+}
+
+
+/*social*/
+
+.footer-col-social li {
+    padding: 10px 0;
+}
+
+.footer-col-social li ul {
+    font-size: 25px;
+    margin-right: 5px;
 }
 
 
@@ -379,7 +477,7 @@ img {
     color: #fff;
     font-size: 23px;
     padding: 160px 0;
-    margin: 60px 0;
+    margin-top: 60;
     background-image: url(../images/bg-paralax.jpg);
     background-size: cover;
     background-position: center;
@@ -459,7 +557,7 @@ img {
     .destinos-col:first-child {
         width: 100%;
     }
-    /*Destaques-col -------------------------*/
+    /*Destaques -------------------------*/
     .destaques-col {
         width: 49%;
         margin-right: 2%;
@@ -468,6 +566,28 @@ img {
     }
     .destaques-col:nth-of-type(2n+0) {
         margin-right: 0;
+    }
+    /*Testemunhas*/
+    .testemunhas-article {
+        width: 31%;
+        margin-right: 3%;
+        margin-bottom: 3%;
+    }
+    .testemunhas-article:nth-last-of-type(3n+1) {
+        margin-right: 0;
+    }
+    /*footer*/
+    .footer-col {
+        width: 45%;
+    }
+    .footer-col:nth-child(2) {
+        width: 30%;
+        margin-left: 5%;
+    }
+    .footer-col:nth-child(3) {
+        width: 15%;
+        float: right;
+        ;
     }
 }
 
