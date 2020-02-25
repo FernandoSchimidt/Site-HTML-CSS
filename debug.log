@@ -1,0 +1,2 @@
+[0224/210522.488:ERROR:process_memory_win.cc(73)] ReadMemory at 0x2460568e780 of 512 bytes failed: Somente uma parte de um pedido ReadProcessMemory ou WriteProcessMemory foi concluída. (0x12B)
+[0224/210540.644:ERROR:process_memory_win.cc(73)] ReadMemory at 0x1ad1579e780 of 512 bytes failed: Somente uma parte de um pedido ReadProcessMemory ou WriteProcessMemory foi concluída. (0x12B)
